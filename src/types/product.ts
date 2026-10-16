@@ -1,0 +1,21 @@
+export type ProductDTO = {
+  id: string;
+  name: string;
+  slug: string;
+  sku: string;
+  brand: string;
+  format: string;
+  shortDescription: string;
+  description: string;
+  composition: string | null;
+  nutritionInfo: string | null;
+  usageInfo: string | null;
+  precautions: string | null;
+  priceMinor: number;
+  currency: string;
+  isDemo: boolean;
+  featured: boolean;
+  category: { name: string; slug: string } | null;
+  images: { url: string; alt: string }[];
+  stock: number;
+};

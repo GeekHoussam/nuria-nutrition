@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2048" height="1024" viewBox="0 0 2048 1024">
+  <rect width="2048" height="1024" fill="#92733d"/>
+  <rect y="22" width="2048" height="12" fill="#173e36"/>
+  <rect y="990" width="2048" height="12" fill="#173e36"/>
+  <g text-anchor="middle" fill="#fff8eb">
+    <text x="512" y="258" font-family="Arial, Helvetica, sans-serif" font-size="82" font-weight="600" letter-spacing="22">NŪRIA</text>
+    <text x="512" y="320" fill="#173e36" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" letter-spacing="12">NUTRITION</text>
+    <path d="M330 405h364" stroke="#173e36" stroke-width="5"/>
+    <text x="512" y="590" fill="#173e36" font-family="Georgia, 'Times New Roman', serif" font-size="70">Vitamine D3</text>
+    <text x="512" y="805" fill="#173e36" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" letter-spacing="5">60 CAPSULES</text>
+    <text x="512" y="868" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" letter-spacing="5">PRODUIT DÉMO</text>
+  </g>
+  <g fill="#173e36" opacity="0.56"><rect x="1440" y="300" width="380" height="8" rx="4"/><rect x="1440" y="345" width="310" height="8" rx="4"/><rect x="1440" y="390" width="350" height="8" rx="4"/><rect x="1440" y="520" width="380" height="8" rx="4"/><rect x="1440" y="565" width="270" height="8" rx="4"/></g>
+</svg>

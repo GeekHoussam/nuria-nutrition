@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1100" viewBox="0 0 900 1100" role="img" aria-labelledby="title desc">
+  <title id="title">Flacon NŪRIA Magnésium, vue de face</title><desc id="desc">Illustration originale d’un flacon blanc avec étiquette vert botanique.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#eef1e7"/><stop offset="1" stop-color="#d7dfcf"/></linearGradient>
+    <linearGradient id="bottle" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#d8d8d4"/><stop offset=".16" stop-color="#fff"/><stop offset=".58" stop-color="#f6f5ef"/><stop offset=".86" stop-color="#fff"/><stop offset="1" stop-color="#c8c9c3"/></linearGradient>
+    <linearGradient id="cap" x1="0" x2="1"><stop stop-color="#102f29"/><stop offset=".45" stop-color="#285448"/><stop offset="1" stop-color="#0d2924"/></linearGradient>
+    <radialGradient id="glow"><stop stop-color="#fff" stop-opacity=".9"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="24"/></filter>
+  </defs>
+  <rect width="900" height="1100" rx="44" fill="url(#bg)"/>
+  <circle cx="690" cy="180" r="270" fill="url(#glow)"/>
+  <path d="M0 840 C180 750 330 890 510 815 C680 745 770 755 900 810 V1100 H0Z" fill="#c9d5c0"/>
+  <ellipse cx="450" cy="948" rx="240" ry="52" fill="#42574d" opacity=".2" filter="url(#shadow)"/>
+  <g>
+    <path d="M326 245h248l18 78v40H308v-40z" fill="url(#cap)"/>
+    <g stroke="#d7e1da" stroke-opacity=".18" stroke-width="4"><path d="M330 258v93M350 250v105M370 250v105M390 250v105M410 250v105M430 250v105M450 250v105M470 250v105M490 250v105M510 250v105M530 250v105M550 250v105M570 258v93"/></g>
+    <path d="M300 351 Q300 320 332 320h236q32 0 32 31l25 87v385q0 89-88 107H363q-88-18-88-107V438z" fill="url(#bottle)"/>
+    <path d="M304 482h292v317q0 30-28 30H332q-28 0-28-30z" fill="#173e36"/>
+    <path d="M304 482h292v18H304z" fill="#c2a16a"/>
+    <text x="450" y="573" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-size="38" letter-spacing="9">NŪRIA</text>
+    <text x="450" y="610" text-anchor="middle" fill="#dce7da" font-family="Arial,sans-serif" font-size="15" letter-spacing="4">NUTRITION</text>
+    <path d="M420 651q30-42 60 0q-29-13-60 0z" fill="none" stroke="#c2a16a" stroke-width="2"/>
+    <text x="450" y="704" text-anchor="middle" fill="#fff" font-family="Georgia,serif" font-size="31">Magnésium</text>
+    <text x="450" y="739" text-anchor="middle" fill="#fff" font-family="Georgia,serif" font-size="25">Bisglycinate</text>
+    <line x1="378" x2="522" y1="769" y2="769" stroke="#c2a16a"/>
+    <text x="450" y="803" text-anchor="middle" fill="#dce7da" font-family="Arial,sans-serif" font-size="14" letter-spacing="2">60 GÉLULES • DÉMO</text>
+    <path d="M330 389q20-28 60-31" fill="none" stroke="#fff" stroke-opacity=".68" stroke-width="12" stroke-linecap="round"/>
+  </g>
+</svg>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2048" height="1024" viewBox="0 0 2048 1024">
+  <rect width="2048" height="1024" fill="#173e36"/>
+  <rect x="0" y="22" width="2048" height="12" fill="#c2a16a"/>
+  <rect x="0" y="990" width="2048" height="12" fill="#c2a16a"/>
+  <g fill="#f8f5ee" text-anchor="middle">
+    <text x="512" y="256" font-family="Arial, Helvetica, sans-serif" font-size="82" font-weight="600" letter-spacing="22">NŪRIA</text>
+    <text x="512" y="318" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="600" letter-spacing="12">NUTRITION</text>
+    <path d="M332 395h360" stroke="#c2a16a" stroke-width="5"/>
+    <text x="512" y="540" font-family="Georgia, 'Times New Roman', serif" font-size="62">Magnésium</text>
+    <text x="512" y="612" font-family="Georgia, 'Times New Roman', serif" font-size="48">Bisglycinate</text>
+    <text x="512" y="782" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="600" letter-spacing="6">60 GÉLULES</text>
+    <text x="512" y="850" fill="#c2a16a" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" letter-spacing="5">PRODUIT DÉMO</text>
+  </g>
+  <g fill="#dce7d8" opacity="0.72">
+    <text x="1450" y="290" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" letter-spacing="4">NŪRIA NUTRITION</text>
+    <rect x="1450" y="350" width="360" height="8" rx="4"/>
+    <rect x="1450" y="390" width="300" height="8" rx="4"/>
+    <rect x="1450" y="430" width="340" height="8" rx="4"/>
+    <rect x="1450" y="470" width="240" height="8" rx="4"/>
+    <rect x="1450" y="560" width="360" height="8" rx="4"/>
+    <rect x="1450" y="600" width="280" height="8" rx="4"/>
+  </g>
+</svg>
