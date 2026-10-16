@@ -7,6 +7,7 @@ import Image from "next/image";
 import * as THREE from "three";
 import { cn } from "@/lib/utils";
 import { useReducedMotionPreference } from "@/hooks/use-hydrated";
+import { withBasePath } from "@/lib/site";
 
 type Product3DConfig = {
   name: string;
@@ -22,8 +23,8 @@ const product3DConfigs: Record<string, Product3DConfig> = {
   "magnesium-bisglycinate-60-gelules": {
     name: "Magnésium Bisglycinate",
     kind: "bottle",
-    labelTexture: "/images/magnesium-label-wrap-v2.svg",
-    fallbackImage: "/images/magnesium-packshot-v2.png",
+    labelTexture: withBasePath("/images/magnesium-label-wrap-v2.svg"),
+    fallbackImage: withBasePath("/images/magnesium-packshot-v2.png"),
     capColor: "#173e36",
     ridgeColor: "#2a5147",
     accentColor: "#c2a16a",
@@ -31,8 +32,8 @@ const product3DConfigs: Record<string, Product3DConfig> = {
   "vitamine-d3-60-capsules": {
     name: "Vitamine D3",
     kind: "bottle",
-    labelTexture: "/images/vitamin-d3-label-wrap-v2.svg",
-    fallbackImage: "/images/vitamin-d3-packshot-v2.png",
+    labelTexture: withBasePath("/images/vitamin-d3-label-wrap-v2.svg"),
+    fallbackImage: withBasePath("/images/vitamin-d3-packshot-v2.png"),
     capColor: "#66513b",
     ridgeColor: "#7b674f",
     accentColor: "#173e36",
@@ -40,8 +41,8 @@ const product3DConfigs: Record<string, Product3DConfig> = {
   "omega-3-marin-60-capsules": {
     name: "Oméga-3 Marin",
     kind: "bottle",
-    labelTexture: "/images/omega-3-label-wrap-v2.svg",
-    fallbackImage: "/images/omega-3-packshot-v2.png",
+    labelTexture: withBasePath("/images/omega-3-label-wrap-v2.svg"),
+    fallbackImage: withBasePath("/images/omega-3-packshot-v2.png"),
     capColor: "#1f5d63",
     ridgeColor: "#31737a",
     accentColor: "#c2a16a",
@@ -49,8 +50,8 @@ const product3DConfigs: Record<string, Product3DConfig> = {
   "complexe-beaute-30-gelules": {
     name: "Complexe Beauté",
     kind: "bottle",
-    labelTexture: "/images/beauty-label-wrap-v2.svg",
-    fallbackImage: "/images/beauty-packshot-v2.png",
+    labelTexture: withBasePath("/images/beauty-label-wrap-v2.svg"),
+    fallbackImage: withBasePath("/images/beauty-packshot-v2.png"),
     capColor: "#593b41",
     ridgeColor: "#785058",
     accentColor: "#c2a16a",
@@ -58,8 +59,8 @@ const product3DConfigs: Record<string, Product3DConfig> = {
   "multivitamines-60-gelules": {
     name: "Multivitamines",
     kind: "bottle",
-    labelTexture: "/images/multivitamins-label-wrap-v2.svg",
-    fallbackImage: "/images/multivitamins-packshot-v2.png",
+    labelTexture: withBasePath("/images/multivitamins-label-wrap-v2.svg"),
+    fallbackImage: withBasePath("/images/multivitamins-packshot-v2.png"),
     capColor: "#35412d",
     ridgeColor: "#536048",
     accentColor: "#c2a16a",
@@ -67,8 +68,8 @@ const product3DConfigs: Record<string, Product3DConfig> = {
   "proteines-vegetales-vanille": {
     name: "Protéines Végétales",
     kind: "tub",
-    labelTexture: "/images/protein-label-wrap-v2.svg",
-    fallbackImage: "/images/protein-packshot-v2.png",
+    labelTexture: withBasePath("/images/protein-label-wrap-v2.svg"),
+    fallbackImage: withBasePath("/images/protein-packshot-v2.png"),
     capColor: "#173e36",
     ridgeColor: "#31594e",
     accentColor: "#c2a16a",

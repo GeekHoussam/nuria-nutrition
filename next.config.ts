@@ -1,13 +1,16 @@
 import type { NextConfig } from "next";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
 const nextConfig: NextConfig = {
-  output: "standalone",
-  allowedDevOrigins: ["127.0.0.1"],
-  experimental: {
-    serverActions: {
-      bodySizeLimit: "2mb",
-    },
+  output: "export",
+  basePath,
+  assetPrefix: basePath || undefined,
+  trailingSlash: true,
+  images: {
+    unoptimized: true,
   },
+  allowedDevOrigins: ["127.0.0.1"],
 };
 
 export default nextConfig;

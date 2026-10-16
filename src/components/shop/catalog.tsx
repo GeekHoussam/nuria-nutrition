@@ -7,7 +7,7 @@ import { ProductCard } from "@/components/product/product-card";
 import { filterProducts } from "@/features/products/filter-products";
 
 export function Catalog({ products, initialQuery = "" }: { products: ProductDTO[]; initialQuery?: string }) {
-  const [query, setQuery] = useState(initialQuery);
+  const [query, setQuery] = useState(() => typeof window === "undefined" ? initialQuery : new URLSearchParams(window.location.search).get("q") || initialQuery);
   const [category, setCategory] = useState("all");
   const [maxPrice, setMaxPrice] = useState(300);
   const [inStock, setInStock] = useState(false);

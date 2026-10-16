@@ -3,22 +3,20 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { CartDrawer } from "@/components/cart/cart-drawer";
 import { CookieBanner } from "@/components/layout/cookie-banner";
+import { siteUrl } from "@/lib/site";
 import "./globals.css";
-
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: { default: "NŪRIA Nutrition — Compléments alimentaires", template: "%s | NŪRIA Nutrition" },
   description: "Une approche moderne, transparente et élégante de la complémentation alimentaire au Maroc.",
-  alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     locale: "fr_MA",
     siteName: "NŪRIA Nutrition",
     title: "NŪRIA Nutrition",
     description: "Une approche moderne de la complémentation alimentaire.",
-    images: [{ url: "/images/magnesium-lifestyle-v2.png", width: 1122, height: 1402 }],
+    images: [{ url: `${siteUrl}/images/magnesium-lifestyle-v2.png`, width: 1122, height: 1402 }],
   },
 };
 

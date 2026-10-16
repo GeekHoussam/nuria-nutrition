@@ -1,3 +1,0 @@
-CREATE DATABASE IF NOT EXISTS nuria_shadow CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-GRANT ALL PRIVILEGES ON nuria_shadow.* TO 'nuria'@'%';
-FLUSH PRIVILEGES;

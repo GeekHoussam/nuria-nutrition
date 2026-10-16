@@ -1,9 +1,6 @@
 import Link from "next/link";
-import { auth } from "@/auth";
-import { prisma } from "@/lib/prisma";
+import { CircleSlash2 } from "lucide-react";
 
-export default async function AccountPage() {
-  const session = await auth();
-  const [orders, addresses] = await Promise.all([prisma.order.count({ where: { userId: session!.user.id } }), prisma.address.count({ where: { userId: session!.user.id } })]);
-  return <div><span className="eyebrow">Mon compte</span><h1 className="editorial mt-5 text-6xl text-[#173e36]">Votre espace NŪRIA.</h1><div className="mt-10 grid gap-5 sm:grid-cols-2"><Link href="/mon-compte/commandes" className="rounded-[1.75rem] bg-[#dde7d8] p-7"><span className="text-4xl font-serif">{orders}</span><h2 className="mt-8 font-serif text-2xl">Commandes</h2><p className="mt-2 text-sm text-[#69736c]">Consulter votre historique.</p></Link><Link href="/mon-compte/adresses" className="rounded-[1.75rem] bg-[#ece7dc] p-7"><span className="text-4xl font-serif">{addresses}</span><h2 className="mt-8 font-serif text-2xl">Adresses</h2><p className="mt-2 text-sm text-[#69736c]">Gérer vos adresses enregistrées.</p></Link></div></div>;
+export default function AccountPage() {
+  return <section className="section-space"><div className="container-shell"><div className="mx-auto max-w-2xl rounded-[2rem] bg-[#dde7d8]/65 p-9 text-center md:p-12"><CircleSlash2 className="mx-auto text-[#9b793f]" size={42} /><span className="eyebrow mt-7 inline-block">Démo statique</span><h1 className="editorial mt-5 text-5xl text-[#173e36] md:text-7xl">Espace compte indisponible.</h1><p className="mx-auto mt-6 max-w-xl text-sm leading-7 text-[#59655e]">GitHub Pages ne fournit pas le serveur ni la base de données nécessaires aux comptes clients. Aucun renseignement personnel n’est collecté ici.</p><Link href="/boutique" className="button-primary mt-8">Retour à la boutique</Link></div></div></section>;
 }

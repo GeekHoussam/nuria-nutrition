@@ -1,2 +1,8 @@
 import type { MetadataRoute } from "next";
-export default function robots(): MetadataRoute.Robots { const base = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"; return { rules: [{ userAgent: "*", allow: "/", disallow: ["/admin", "/mon-compte", "/commande", "/api/"] }], sitemap: `${base}/sitemap.xml` }; }
+import { absoluteSiteUrl, siteBasePath } from "@/lib/site";
+
+export const dynamic = "force-static";
+
+export default function robots(): MetadataRoute.Robots {
+  return { rules: [{ userAgent: "*", allow: `${siteBasePath || ""}/`, disallow: [`${siteBasePath}/mon-compte`, `${siteBasePath}/commande`] }], sitemap: absoluteSiteUrl("/sitemap.xml") };
+}

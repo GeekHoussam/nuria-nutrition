@@ -5,6 +5,7 @@ import { useState } from "react";
 import { Menu, Search, ShoppingBag, UserRound, X } from "lucide-react";
 import { useCartStore } from "@/stores/cart";
 import { useHydrated } from "@/hooks/use-hydrated";
+import { withBasePath } from "@/lib/site";
 
 export function HeaderActions({ links }: { links: string[][] }) {
   const mounted = useHydrated();
@@ -36,7 +37,7 @@ export function HeaderActions({ links }: { links: string[][] }) {
       {searchOpen && (
         <div className="fixed inset-0 z-[90] bg-[#f8f5ee]/98 p-5 backdrop-blur-xl">
           <button className="absolute top-7 right-7" type="button" aria-label="Fermer la recherche" onClick={() => setSearchOpen(false)}><X size={28} /></button>
-          <form action="/boutique" className="mx-auto mt-[22vh] max-w-3xl">
+          <form action={withBasePath("/boutique/")} className="mx-auto mt-[22vh] max-w-3xl">
             <label htmlFor="site-search" className="eyebrow">Rechercher dans la collection</label>
             <div className="mt-5 flex items-center gap-4 border-b-2 border-[#173e36] pb-3">
               <Search size={28} />

@@ -1,5 +1,16 @@
 import type { MetadataRoute } from "next";
-import { prisma } from "@/lib/prisma";
 import { articles } from "@/content/articles";
-export const dynamic = "force-dynamic";
-export default async function sitemap(): Promise<MetadataRoute.Sitemap> { const base = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"; const [products, categories] = await Promise.all([prisma.product.findMany({ where: { status: "ACTIVE" }, select: { slug: true, updatedAt: true } }), prisma.category.findMany({ select: { slug: true, updatedAt: true } })]); const staticRoutes = ["", "/boutique", "/nos-ingredients", "/notre-philosophie", "/conseils", "/contact", "/faq"]; return [...staticRoutes.map((route) => ({ url: `${base}${route}`, lastModified: new Date(), changeFrequency: route === "" ? "weekly" as const : "monthly" as const, priority: route === "" ? 1 : .7 })), ...products.map((item) => ({ url: `${base}/produits/${item.slug}`, lastModified: item.updatedAt, changeFrequency: "weekly" as const, priority: .8 })), ...categories.map((item) => ({ url: `${base}/categories/${item.slug}`, lastModified: item.updatedAt, changeFrequency: "monthly" as const, priority: .6 })), ...articles.map((item) => ({ url: `${base}/conseils/${item.slug}`, lastModified: new Date(), changeFrequency: "monthly" as const, priority: .5 }))]; }
+import { categories, products } from "@/server/products";
+import { absoluteSiteUrl } from "@/lib/site";
+
+export const dynamic = "force-static";
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  const staticRoutes = ["", "/boutique", "/nos-ingredients", "/notre-philosophie", "/conseils", "/contact", "/faq"];
+  return [
+    ...staticRoutes.map((route) => ({ url: absoluteSiteUrl(route || "/"), changeFrequency: route === "" ? "weekly" as const : "monthly" as const, priority: route === "" ? 1 : .7 })),
+    ...products.map((item) => ({ url: absoluteSiteUrl(`/produits/${item.slug}`), changeFrequency: "weekly" as const, priority: .8 })),
+    ...categories.map((item) => ({ url: absoluteSiteUrl(`/categories/${item.slug}`), changeFrequency: "monthly" as const, priority: .6 })),
+    ...articles.map((item) => ({ url: absoluteSiteUrl(`/conseils/${item.slug}`), changeFrequency: "monthly" as const, priority: .5 })),
+  ];
+}

@@ -15,7 +15,7 @@ export function Header() {
   return (
     <>
       <div className="bg-[#173e36] px-4 py-2 text-center text-[0.72rem] font-semibold tracking-[0.12em] text-white uppercase">
-        Livraison partout au Maroc
+        Démo statique — commandes et comptes désactivés
       </div>
       <header className="sticky top-0 z-50 border-b border-[#173e36]/10 bg-[#f8f5ee]/88 backdrop-blur-xl">
         <div className="container-shell flex h-[74px] items-center justify-between gap-5">
