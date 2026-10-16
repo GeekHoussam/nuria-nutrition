@@ -100,6 +100,15 @@ Les tests d’intégration et E2E nécessitent MySQL et le seed. Les tests de co
 
 Le projet produit une sortie Next.js `standalone` adaptée à un conteneur Node. Il n’est pas publié sur Sites, car l’exigence MySQL repose sur une connexion TCP non disponible dans ce runtime serverless.
 
+### Railway
+
+1. Créer un projet Railway vide et y ajouter une base MySQL.
+2. Ajouter ce dépôt GitHub comme service applicatif.
+3. Définir `DATABASE_URL` avec une référence vers `MySQL.MYSQL_URL` et définir les autres variables de `.env.example`. `SHADOW_DATABASE_URL` peut rester vide en production.
+4. Configurer `pnpm deploy:prepare` comme commande de pré-déploiement et `/api/health` comme chemin de contrôle de santé.
+5. Après la première migration, exécuter `pnpm db:seed` une seule fois pour créer le catalogue et le compte administrateur. Ne pas l’ajouter à la commande de pré-déploiement : le seed réinitialise les stocks de démonstration.
+6. Générer un domaine public, définir `NEXT_PUBLIC_SITE_URL` avec son URL HTTPS, puis redéployer afin d’intégrer l’URL canonique au build.
+
 ## Limites connues du prototype
 
 - Aucun paiement, e-mail marketing ou e-mail transactionnel réel.
